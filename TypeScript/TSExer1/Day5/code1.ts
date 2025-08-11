@@ -106,7 +106,7 @@ for(let x in years){
     console.log(years[x]);
 }
 
-//USING FOR-IN LOOP - ACCESS ARRAY
+//USING FOR-OF LOOP - ACCESS ARRAY
 for(let x of years){
     console.log(x);
 }
@@ -128,3 +128,7 @@ console.log(years.concat(days));
 //years.find(2023, 2, )
 */
 
+let days = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const daysHigherThan3 = days.find(day => day > 3);
+console.log(daysHigherThan3);
