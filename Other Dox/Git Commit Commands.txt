@@ -1,0 +1,36 @@
+One Time Git Config:
+$ git config --list --show-origin
+
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+
+
+cd C:\Users\Lenovo\OneDrive\Desktop\TCS Training\Projects Code\Playwright2
+
+git init
+
+git add . (OR git add --all)
+
+git remote add origin https://github.com/SomuTrainer1/TS-Playwright-TCS-1.git
+
+git remote -v 
+
+git commit -m "Committing all existing files from project to Git Repo"
+
+git push origin master (OR git push origin main based on your base branch)
+
+================================================================
+
+Clone Repo from GitHub Acc to Local folder
+==================================
+cd localFolderPath
+
+git clone https://github.com/SomuTrainer1/TS-Playwright-TCS-1.git
+
+git clone -b master https://github.com/SomuTrainer1/TS-Playwright-TCS-1.git
+
+
+
+
+
