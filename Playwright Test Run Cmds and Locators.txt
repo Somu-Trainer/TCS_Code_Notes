@@ -1,0 +1,113 @@
+npm init playwright@latest
+npm init playwright@latest -y >>>>> default options will be taken
+npx playwright test
+npx playwright show-report
+npx playwright test --ui
+npx playwright test --headed
+npx playwright test --project firefox
+npx playwright test --headed --project firefox
+npx playwright test --headed --project firefox --project chromium
+
+npx playwright test example.spec.ts ===>> specific test file
+npx playwright test tests/example.spec.ts tests-examples/demo-todo-app.spec.ts ===> test files from multiple folders
+npx playwright test example ===>> test file containing specific name word in it
+npx playwright test -g "title" ===>> test case containing specific name word in it
+
+npx playwright test --last-failed
+npx playwright test --debug
+npx playwright test example.spec.ts --debug
+npx playwright test example.spec.ts:10 --debug
+
+npx playwright test --trace on
+===============================================================
+
+
+USER FACING LOCATORS
+
+Locators Specific to Playwright:
+1. getByRole - button, img, link
+2. getByText - using the text within an element tag
+3. getByLabel - locate a form control by associated label text
+4. getByPlaceholder - locate an input element by placeholder attribute detail
+5. getByAltText - locate an element by text alternative attribute text (usually images)
+6. getByTitle - locate an element by title attribute
+7. getByTestId - locate an element by data-testid attribute
+
+Regular Locator:
+8. locator
+====================================
+
+Parallelism - 
+
+Selenium Actions:
+click
+sendkeys
+
+======================================
+Actions in Playwright:
+1. Text Input - fill, clear
+2. Check / Uncheck the checkboxes, radio buttons
+check - selecting the checkbox / radio button
+uncheck - deselecting
+3. Dropdown / Combo box
+selectOption
+4. Mouse Clicking:
+click
+dblclick
+hover
+DragTo
+5. Press method for Keyboard
+press('Enter')
+press('Control+Alt+Del') OR press('Control+ArrowLeft')
+
+6. For file uploading when you have element as input and type=file
+setInputFiles('path of the file for uploading');
+
+7. When uploading from desktop, when the element is not input
+setfiles()
+
+8. Focus on an element
+element.focus()
+
+9. drag and drop
+dragTo('other locator where you have to drag / drop our first element')
+
+//do the action for clicking / hovering on the element to be dragged
+page.mouse.down()
+//do the action for clicking / hovering on the element to be dropped at
+page.mouse.up();
+
+10. Scrolling into view
+element.scrollIntoViewIfNeeded();
+
+11. 
+page.mouse.wheel(x, y);
+----------------------------------------------
+
+await page.locator("xpath value").dispatchEvent('click');
+await page.locator("xpath value").fill("first Name", {ENTER}) ;
+
+=====================================================
+
+LOCATOR DETAILING:
+page.getByRole('button').click();
+page.getByRole('button', {name : 'SignIn'}).click();
+
+page.locator('css=.class').fill("abc");
+page.locator('xpath=//span[@value="hello"]').fill("abc");
+
+page.locator('.class').fill("abc");
+page.locator('//span[@value="hello"]').fill("abc");
+
+page.getByLabel('span').filter({hasText: 'firstName'}).click();
+
+
+
+
+
+
+
+
+
+
+
