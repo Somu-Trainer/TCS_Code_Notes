@@ -33,11 +33,15 @@ test('form filling / use multiple element types', async ({ page }) => {
     langDropdown.scrollIntoViewIfNeeded();
     await page.waitForTimeout(1000);
     await langDropdown.selectOption("English (India)");    
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(3000);
+
+    await page.mouse.wheel(0, 50);
+    await page.waitForTimeout(4000);
     const cancelBtn = page.locator("#cancel_changes_button");
     //page.getByRole("button", {name: "Cancel"});
     cancelBtn.scrollIntoViewIfNeeded();
     await page.waitForTimeout(1000);
     await cancelBtn.click();
+    await cancelBtn.waitFor({ state: 'hidden' });
     await page.waitForTimeout(2000);
 });

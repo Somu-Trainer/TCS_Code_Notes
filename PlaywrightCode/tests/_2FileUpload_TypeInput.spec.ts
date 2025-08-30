@@ -14,5 +14,6 @@ test('Upload files for input type', async ({ page }) => {
 
     const checkUploadedFileName = await page.locator("#fileList");
     console.log(await checkUploadedFileName.textContent());
+
     await expect(checkUploadedFileName).toHaveText(file1 + file2);
 });

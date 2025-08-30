@@ -1,0 +1,18 @@
+[
+    {
+        "fname": "Rajesh",
+        "sname": "Khanna",
+        "emailID": "rajesh001@gmail.com"
+    },
+    {
+        "fname": "Sachin",
+        "sname": "Tendulkar",
+        "emailID": "stendulkar007@gmail.com"
+    },
+
+    {
+        "fname": "Amit",
+        "sname": "Kumar",
+        "emailID": "amitKumar007@gmail.com"
+    }
+]
